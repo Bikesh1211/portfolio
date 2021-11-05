@@ -1,0 +1,16 @@
+.img-thumbnail{
+    border-radius: 20px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+
+}
+@media screen and (max-width: 700) {
+    .row p{
+        font-size: .5vw;
+    }
+    
+}
+#my-resume{
+    border: 1px solid red;
+}

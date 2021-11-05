@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #0A192F;
+    /* background-color: rgb(33, 26, 39); */
+    background-color: #1E1E28;
+
+    color: #719FB0;
+    font-family: 'Space Mono', monospace;   
+}

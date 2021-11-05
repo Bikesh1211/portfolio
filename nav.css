@@ -1,0 +1,158 @@
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: #0A192F; */
+  /* background-color: rgb(33, 26, 39); */
+  background-color: #1E1E28;
+
+  /* box-shadow: rgba(0, 0, 0, 0.09) 0px 10px 15px; */
+  /* border: 1px solid #05bfdb; */
+  font-family: 'Space Mono', monospace;   
+  position: sticky;
+  top: 0;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  z-index: 1;
+  transition: all 1s ease;
+}
+
+.logo{
+  color: rgb(4, 219, 205);
+  /* box-shadow: rgba(187, 13, 13, 0.09) 0px 10px 15px; */
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin: .5rem;
+}
+.top-nav{
+  text-align: center;
+  justify-items: center;
+  background-color: rgb(17, 250, 13);
+  display: none;
+}
+
+.navbar-links ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navbar-links li{
+  list-style-type: none;
+}
+.navbar-links li a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  display: block;
+  transition: all .5s ease;
+
+}
+.navbar-links li:hover{
+  /* background-color: rgb(210, 248, 210); */
+  color: rgb(0, 255, 60);
+}
+.navbar-links a:hover{
+  color: rgb(0, 255, 60);
+  transform: scale(1.5);
+  letter-spacing: 2px;
+
+}
+#nav-resume-btn{
+  /* display: none; */
+  border: none;
+  /* padding: 10px; */
+  /* background-color: rgb(0, 255, 60); */
+  border-radius: 5px;
+  color: #05bfdb;
+  border: 1px solid #05bfdb;
+  transition: all 1s ease;
+}
+#nav-resume-btn:hover{
+  background-color: rgb(0, 255, 60);
+  border: 1px solid rgb(0, 255, 60);
+  color: #0A192F;
+}
+#nav-resume-btn a{
+  transition: all .5s ease;
+
+}
+#nav-resume-btn a:hover{
+  letter-spacing: normal;
+  transform: scale(1.1);
+  color: #0A192F;
+  padding-left: 30px;
+  padding-right: 30px;  
+}
+
+.nav-resume-btn li:hover{
+  background-color: #05bfdb;
+  color: #0A192F;
+}
+
+.toggle-button{
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  margin-top: 10px;
+
+}
+.toggle-button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+.logo{
+  transition: all 0.5s ease;
+}
+.logo:hover{
+  transform: scale(1.2);
+  letter-spacing: 2px;
+}
+
+/* for nav resume btn */
+@media (max-width:720px) {
+  #nav-resume-btn{
+    display: none;
+  }
+  
+}
+/* for nav resume btn */
+
+
+@media (max-width: 600px) {
+  .toggle-button{
+    display: flex;
+  }
+  #nav-resume-btn{
+    display: none;
+  }
+  .navbar-links{
+    display: none;
+    width: 100%;
+  }
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul{
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links li{
+    text-align: center;
+  }
+  .navbar-links li a{
+    padding: .5rem 1rem;
+  }
+  
+  .navbar-links.active{
+    display: flex;
+  }
+}

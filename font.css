@@ -1,0 +1,19 @@
+.name-font{
+    font-size: 6vw;
+    font-family:'Caliber','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #E8F6EF;
+    transition: all 1.5s ease;
+}
+.skill-icons{
+    font-size: 90px;
+    text-align: center;
+    color: rgb(162, 177, 177);
+    /* padding-top: 100px; */
+}
+
+@media (max-width: 600px) {
+    .skill-icons{
+        font-size: 50px;
+    }
+    
+}
