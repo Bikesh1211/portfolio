@@ -9,7 +9,8 @@ progress.xp {
  
  }
  progress.xp::-webkit-progress-value{
-     background:aqua;
+     background:rgb(176, 17, 255);
+
  }
 
 
