@@ -5,8 +5,9 @@ body{
     margin: 0px;
     padding: 0px;
 /*     background-color: #0A192F; */
-/*     background-color: #1E1E28; */
-    background-image: linear-gradient(to bottom, #070227 , rgb(29, 4, 44));
+    background-color: #0e141b;
+
+/*     background-image: linear-gradient(to bottom, #070227 , rgb(29, 4, 44)); */
 
     color: #719FB0;
     font-family: 'Space Mono', monospace;   
