@@ -22,8 +22,6 @@
 
 .logo{
   color: rgb(4, 219, 205);
-  /* box-shadow: rgba(187, 13, 13, 0.09) 0px 10px 15px; */
-  text-transform: uppercase;
   font-size: 1.5rem;
   margin: .5rem;
 }
