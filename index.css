@@ -12,3 +12,6 @@ body{
     color: #719FB0;
     font-family: 'Space Mono', monospace;   
 }
+a{
+    text-decoration: none;
+}
