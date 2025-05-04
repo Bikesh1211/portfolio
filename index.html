@@ -2,470 +2,436 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bikesh Chaudhary</title>
-    <!-- Bootstrap CDN -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Bootstrap CDN ends -->
-    <link rel="stylesheet" href="bootstrap.css" />
-
-    <!-- FontAwesome icon cdn -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    />
-    <!-- FontAwesome icon cdn ends -->
-    <!-- favicon -->
-    <link rel="icon" href="blogo.ico">
-
-    <!-- favicon ends -->
-    <!-- external css -->
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="nav.css" />
-    <link rel="stylesheet" href="profile.css" />
-    <link rel="stylesheet" href="others.css" />
-    <link rel="stylesheet" href="font.css">
-    <link rel="stylesheet" href="project.css">
-    <link rel="stylesheet" href="contact.css">
-    <!-- external css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="blogo.ico" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body>
-    <!-- Nav Bar -->
+  <body class="bg-gray-900 text-white font-sans">
     <!-- Navbar -->
-<!--     <div class="fixed-nav" style="text-align: center; color: white">Welcome To My Personal Portfolio</div> -->
-    <nav class="navbar">
-      <div class="logo"><a href="#home" style="text-decoration: none; color: aqua;">Portfolio</a></div>
-      <a href="#" class="toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </a>
-      <div class="navbar-links">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#profile">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <!-- icons -->
+    <!-- Font Awesome (include in <head> or before this nav) -->
+    <script
+      src="https://kit.fontawesome.com/yourkitid.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 px-6 py-4 shadow-md sticky top-0 z-50">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="text-3xl font-extrabold text-cyan-400 tracking-wide">
+          Portfolio
+        </div>
+
+        <!-- Hamburger (Mobile) -->
+        <button
+          id="menu-toggle"
+          class="text-white text-2xl md:hidden focus:outline-none"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Menu Links (Desktop) -->
+        <ul class="hidden md:flex gap-8 text-sm font-medium text-white">
           <li>
-              <a href="https://github.com/Bikesh1211" target="_blank"><i class="fab fa-github"></i></a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/bikesh1211/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/_bikeshchaudhary_/" target="_blank"><i class="fab fa-instagram"></i></a>
-            </li>      
-<!-- 
-          <li id="nav-resume-btn">
-            <a href="resume.pdf" target="_blank">View Resume</a>
-          </li> -->
-          
+            <a
+              href="#home"
+              class="hover:text-cyan-400 hover:underline underline-offset-4 transition"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#profile"
+              class="hover:text-cyan-400 hover:underline underline-offset-4 transition"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#skills"
+              class="hover:text-cyan-400 hover:underline underline-offset-4 transition"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="hover:text-cyan-400 hover:underline underline-offset-4 transition"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="hover:text-cyan-400 hover:underline underline-offset-4 transition"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/Bikesh1211"
+              target="_blank"
+              class="hover:text-cyan-400 transition"
+            >
+              <i class="fab fa-github text-xl"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/bikesh1211/"
+              target="_blank"
+              class="hover:text-cyan-400 transition"
+            >
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/_bikeshchaudhary_/"
+              target="_blank"
+              class="hover:text-cyan-400 transition"
+            >
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </li>
         </ul>
       </div>
+
+      <!-- Mobile Menu (Hidden by default) -->
+      <ul
+        id="mobile-menu"
+        class="mt-4 space-y-4 text-white text-sm font-medium hidden md:hidden"
+      >
+        <li><a href="#home" class="block hover:text-cyan-400">Home</a></li>
+        <li><a href="#profile" class="block hover:text-cyan-400">About</a></li>
+        <li><a href="#skills" class="block hover:text-cyan-400">Skills</a></li>
+        <li>
+          <a href="#projects" class="block hover:text-cyan-400">Projects</a>
+        </li>
+        <li>
+          <a href="#contact" class="block hover:text-cyan-400">Contact</a>
+        </li>
+        <li class="flex gap-4 pt-2">
+          <a
+            href="https://github.com/Bikesh1211"
+            target="_blank"
+            class="hover:text-cyan-400"
+            ><i class="fab fa-github text-xl"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/bikesh1211/"
+            target="_blank"
+            class="hover:text-cyan-400"
+            ><i class="fab fa-linkedin text-xl"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/_bikeshchaudhary_/"
+            target="_blank"
+            class="hover:text-cyan-400"
+            ><i class="fab fa-instagram text-xl"></i
+          ></a>
+        </li>
+      </ul>
     </nav>
-    <!-- Navbar -->
 
+    <!-- JavaScript to toggle menu -->
+    <script>
+      const toggleBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-    <!-- nav menu mobile -->
-    <script src="nav.js"></script>
-    <!-- nav menu mobile -->
+      toggleBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
 
-    <div class="container-fluid">
-      <div class="container container-sm">
-        <!-- my profile -->
-        <section id="home" style="text-align: center;">
-        <div class="row justify-content-md-center" id="fadein-effect">
-          <div class="col-sm-12 col-md-12 col-xl-10">
+    <!-- Hero -->
+    <section id="home" class="text-center py-20 px-6">
+      <h6 class="text-gray-400 text-lg">Hi, My Name is</h6>
+      <h1 class="text-4xl md:text-6xl font-bold text-cyan-400 mt-2">
+        Bikesh Chaudhary
+      </h1>
+      <h2 class="text-2xl md:text-3xl mt-2 font-semibold">
+        Software Developer
+      </h2>
+      <p class="mt-6 max-w-3xl mx-auto text-gray-300">
+        As a passionate software developer, I specialize in building scalable
+        and efficient web applications...
+      </p>
+      <a
+        href="Bikesh Chaudhary -20220709.pdf"
+        target="_blank"
+        class="inline-block mt-6 px-6 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-600 transition"
+        >View Resume</a
+      >
+    </section>
 
-            <h6 class="intro">Hi, My Name is
-              </h6>
-
-            <h1 class="name-font">Bikesh Chaudhary</h1>
-            <h1 id="js">Full Stack Developer</h1>
-            <!-- <h2>I am a JavaScript Developer</h2> -->
-            <p>
-              <!-- <span id="highlight-text">
-                Hello! I am Bikesh Chaudhary and i been  Working in this
-                field since 2021.</span> <br> -->
-                
-     
-               </span> <br>
-              <I></I>I am Very Passionate about Computer & Technology and I love trying new things, creating new methods, and introducing new ideas.<br>
-            </p>              
-            <!-- <button id="resume-btn">Download My Resume</button> -->
-            <br>
-            <a href="Bikesh Chaudhary -20220709.pdf" target="_blank" id="resume-btn" style="text-decoration: none; margin: 20px;">View Resume</a>
-
-          </div>
-        </div>
-      </section>
-
-        <!-- my profile ends -->
-
-        <!-- profile -->
-        <section id="profile">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-xl-12">
-              <h1 style="text-align: center;" class="main-section-heading">About Me</h1>
-            </div>
-          </div>
-
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-xl-7">
-            <p style="text-align:justify;">
-              <span id="highlight-text"><br>
-               
-             Software Developer with a passion for developing
-             innovative programs to fulfil Client Requirement.  Well-
-             versed in technology and writing code to create systems
-             that are reliable and user-friendly.
-              </span>
-              <br> Confident
-             communicator, strategic thinker, and innovative creator to
-             develop software that is customized to meet a company’s
-             organizational needs, highlight their core competencies,
-             and further their success.
-             <br>     
-            </p>
-              
-             
-
-          </div>
-          <div class="col-12 col-md-4 col-xl-3">
-            <br>
-<!--             <img class="profile-img" src="https://lofficiel.imgix.net/production/monaco/images/1606754919732485-robert-pattinson-dior-campaing-5.jpeg?w=1900&fit=crop&crop=faces&auto=%5B%22format%22%2C%20%22compress%22%5D&cs=srgb" alt="bikesh Chaudhary"/> -->
-<!--             <img class="profile-img" src="https://github.com/Bikesh1211/portfolio/blob/main/img/bikesh.jpg" alt="bikesh Chaudhary"/> -->
-                 <img class = "profile-img" src="img/bikesh.jfif"/>
-          </div>
-        </div>
-        </section>
-        <section id="myskills">
-        </section>
-          <!-- <div class="skills-container"> -->
-
-            <!-- new skill section -->
-            <section id="skills">
-            <div class="row justify-content-around">
-              <h1 style="text-align: center;" class="main-section-heading">Skills</h1>
-              <div class="col-sm-10 col-md-7 col-xl-4">
-                <label for="html">HTML</label>
-                <br>
-                <progress class="xp" id="progress-bar" value="90" max="100">32%</progress>
-                <br>
-                <label for="html">CSS</label>
-                <br>
-                <progress class="xp" id="progress-bar" value="85" max="100">32%</progress>
-                <br>
-                <label for="html">JavaScript</label>
-                <br>
-                <progress class="xp" id="progress-bar" value="80" max="100">32%</progress>
-                <br>
-
-                <label for="html">Bootstrap</label>
-                <br>
-                <progress class="xp" id="progress-bar" value="87" max="100">80%</progress>
-                <br>
-
-                <label for="html">Next.js</label>
-                <br>
-                <progress class="xp" id="progress-bar" value="78" max="100">32%</progress>
-                <br>
-
-                <label for="html">React</label>
-                <br>
-                <progress class="xp" id="progress-bar" value="90" max="100">32%</progress>
-                <br>
-
-                <label for="html">MongoDB</label>
-                <br>
-                <progress class="xp" id="progress-bar" value="80" max="100">32%</progress>
-                <br>
-                <label for="html">MYSQL</label>
-                <br>
-                <progress class="xp" id="progress-bar" value="80" max="100">60%</progress>
-                <br>
-
-                <label for="html">Node</label>
-                <br>
-                <progress class="xp" id="progress-bar" value="88" max="100">32%</progress>
-                <br>
-
-                <label for="html">Express</label>
-                <br>
-                <progress class="xp" id="progress-bar" value="80" max="100">32%</progress>
-                <br>
-
-
-                <label for="html">Git & Github</label>
-                <br>
-                <progress class="xp" id="progress-bar" value="80" max="100">32%</progress>
-                <br>
-  
-                <label for="html">AWS</label>
-                <br>
-                <progress class="xp" id="progress-bar" value="88" max="100">32%</progress>
-                <br>
-  
-                <label for="html">TypeScript</label>
-                <br>
-                <progress class="xp" id="progress-bar" value="80" max="100">87%</progress>
-                <br>
-              </div>
-              <div class="col-10 col-md-5 col-xl-4 skill-icons">
-                <div class="mern">
-                  <i class="fab fa-html5"></i>
-                  <i class="fab fa-css3-alt"></i>
-                  <!-- js -->
-                  <i class="fab fa-js-square"></i>
-                  <!-- js -->
-                  <i class="fab fa-bootstrap"></i>
-                  <i class="fab fa-sass"></i>
-
-                  <i class="fab fa-node"></i>
-                  <i class="fab fa-envira"></i>
-
-                  <i class="fab fa-react"></i>
-
-                  <i class="fab fa-git"></i>
-                  <i class="fab fa-github-square"></i>
-                  <!-- <img src="https://codingthesmartway.com/wp-content/uploads/2019/01/mern_logo.png" alt=""> -->
-                </div>
-              </div>
-            </div>
-            </section>
-            <!-- new skill section -->
-
-            <!-- Project section -->
-            <section id="projects">
-                  <div class="row justify-content-center">
-                    <h1 style="text-align: center;" class="main-section-heading">My Projects</h1>
-
-                    </div>
-
-              <div class="row justify-content-center">
-              <div class="col-xl-3 project-folder">
-                <a href="https://web-tesla.netlify.app/" target="_blank">
-                  <p>Tesla(React)</p>
-                  <img src="img/tesla.png" alt="">
-                </a>
-              </div>
-              <div class="col-xl-3 project-folder">
-                <a href="https://lacunaventure.netlify.app/" target="_blank">
-
-                  <p>Lacuna Venture (React)</p>
-                  <img src="img/lacunaventure.png" alt="">
-                </a>
-              </div>
-              <div class="col-xl-3 project-folder">
-                <a href="https://disneyplus-web.netlify.app/" target="_blank">
-
-                  <p>Disney Plus (React)</p>
-                  <img src="img/disneyplus.png" alt="">
-                </a>
-              </div>
-
-              </div>
-              <div class="row justify-content-center">
-                <div class="col-xl-3 project-folder">
-                                  <p>Professional Ecommerce Website</p>
-                  <img src="img/project4.jpg" alt="">
-                </div>
-          
-                <div class="col-xl-3 project-folder">
-                  <a href="https://bikesh1211.github.io/quote/" target="_blank">
-                   <p> Quote Generator </p>
-                    <img src="img/quote.png" height="100px">
-                  </a>                  
-                </div>
-       <!--  -->
-                <div class="col-xl-3 project-folder">
-                  <a href="https://bikesh1211.github.io/aaluplus/" target="_blank">
-
-                    <p>Tic Tac Toe</p>
-                    <img src="img/tic-tac-toe.png" alt="">
-                  </a>
-                </div>
-              </div>
-
-              <!-- new projectes -->
-              <div class="row justify-content-center">
-    
-                
-                <!-- <div class="col-xl-3 project-folder">
-                  <a href="https://bikesh1211.github.io/quote/" target="_blank">
-                   <p> Quote Generator </p>
-                    <img src="img/quote.png" height="100px">
-                  </a>                  
-                </div> -->
-        
-              </div>
-
-            </section>
-            <!-- Project section ends -->
-
-            <div class="row justify-content-center">
-              <h1 style="text-align: center; padding: 50px;" class="main-section-heading">My Services</h1>
-              <div class="col-xl-3 project-folder " style="padding: 20px;">
-                <h2 style="text-align: center;">Web Development</h2>  
-                                <p>If You Want Build Any Kind of Website Contact Me </p>
-                                <a href="#contact" style="text-decoration: none; color: yellow;">Order Now ></a>
-                
-              </div>
-              <div class="col-xl-3 project-folder " style="padding: 20px;">
-                <h2 style="text-align: center;">UI/UX Design</h2>
-                                <p>If You want UI/UX Designer Consider Me for Professional UI/UX Design</p>
-                                     <a href="#contact" style="text-decoration: none; color: yellow;">Order Now ></a>
-
-                
-              </div>
-              <div class="col-xl-3 project-folder " style="padding: 20px;">
-                <h2 style="text-align: center;">Graphic Design</h2>
-                                <p>Contact Me For Any Kind of Graphic Designing Work. </p>
-                                    <a href="#contact" style="text-decoration: none; color: yellow;">Order Now ></a>
-
-                
-              </div>
-            </div>
-
-
-            <!-- my Services section -->
-            <section class="services">
-              
-            </section>
-            <!-- my Services section -->
-
-            <!-- contact section -->
-            <section id="contact">
-              <div class="row justify-content-center">
-                <div class="col-xl-8">
-                  <!--Section: Contact v.2-->
-<section class="mb-4 email-form">
-
-  <!--Section heading-->
-  <h2 class="h1-responsive font-weight-bold text-center my-4">Contact</h2>
-  <!--Section description-->
-  <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-      a matter of hours to help you.</p>
-
-  <div class="row">
-
-      <!--Grid column-->
-      <div class="col-md-9 mb-md-0 mb-5">
-          <form id="contact-form" name="contact-form" action="https://formsubmit.co/80f16790ae32593344cd86ec11d8b7d5" method="POST">
-
-              <!--Grid row-->
-              <div class="row">
-
-                  <!--Grid column-->
-                  <div class="col-md-5">
-                      <div class="md-form mb-0">
-                          <input type="text" id="name" name="name" class="form-control">
-                          <label for="name" class="">Your Name</label>
-                      </div>
-                  </div>
-                  <!--Grid column-->
-
-                  <!--Grid column-->
-                  <div class="col-md-5">
-                      <div class="md-form mb-0">
-                          <input type="text" id="email" name="email" class="form-control">
-                          <label for="email" class="">Your email</label>
-                      </div>
-                  </div>
-                  <!--Grid column-->
-
-              </div>
-              <!--Grid row-->
-
-              <!--Grid row-->
-              <div class="row">
-                  <div class="col-md-10">
-                      <div class="md-form mb-0">
-                          <input type="hidden" name="_next" value="https://bikesh1211.github.io/portfolio/thankyou.html"> 
-                          <input type="text" id="subject" name="subject" class="form-control">
-                          <label for="subject" class="">Subject</label>
-                      </div>
-                  </div>
-              </div>
-              <!--Grid row-->
-
-              <!--Grid row-->
-              <div class="row">
-
-                  <!--Grid column-->
-                  <div class="col-md-10">
-
-                      <div class="md-form">
-                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                          <label for="message">Your message</label>
-                      </div>
-
-                  </div>
-              </div>
-              <!--Grid row-->
-
-          </form>
-
-          <div class="text-center text-md-left">
-              <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();" style="margin: 50px;">Send Message</a>
-          </div>
-          <div class="status"></div>
-      </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      <div class="col-md-3 text-center">
-          <ul class="list-unstyled mb-md-0">
-              <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                  <p>Kathmandu, Kalanki 44600, Nepal</p>
-              </li>
-
-              <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                  <p>9810583110</p>
-              </li>
-
-              <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                  <p>bikeshchaudhary1211 <br>@gmail.com </p>
-              </li>
-          </ul>
-      </div>
-      <!--Grid column-->
-
-      
-    </div>
-    <!-- footer -->
-    <hr>
-    <div class="col-12" style="text-align: center;padding-top: 60px;padding-bottom: 10px;   color: rgb(255, 255, 255);; width: 100%;">
-      <p style="background-image: linear-gradient(to right, #1E1E28, #29293195); padding: 10px;">
-      <span><i class="far fa-copyright"></i></span> 2021 All Rights Reserved By thebikeshcompany@gmail.com
-    </p> 
-  </div>
-  <!-- footer -->
-
-</section>
-<!--Section: Contact v.2-->
-                </div>
-                </div>
-            </section>
-            <!-- contact section ends -->
-            
+    <!-- About -->
+    <section id="profile" class="bg-gray-800 py-16 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl text-center font-bold mb-8">About Me</h2>
+        <div class="flex flex-col md:flex-row gap-10 items-center">
+          <img
+            src="img/bikesh.jfif"
+            class="w-40 h-40 rounded-full object-cover"
+            alt="Bikesh"
+          />
+          <p class="text-gray-300 text-justify">
+            Software Developer with a passion for developing innovative programs
+            to fulfil Client Requirement. Well- versed in technology and writing
+            code to create systems that are reliable and user-friendly.
+            Confident communicator, strategic thinker, and innovative creator to
+            develop software that is customized to meet a company’s
+            organizational needs, highlight their core competencies, and further
+            their success.
+          </p>
         </div>
       </div>
-    </div>
+    </section>
 
-                        <!-- container ends div -->
-                      </div>
-                      <!-- container ends div -->
+    <!-- Skills -->
+    <section id="skills" class="py-16 px-6 bg-gray-900 text-white">
+      <h2 class="text-4xl text-center font-bold mb-12 text-cyan-400">Skills</h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+      >
+        <div
+          class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
+        >
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="text-lg font-semibold">JavaScript / TypeScript</h3>
+            <span class="text-sm text-cyan-400">90%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-3">
+            <div
+              class="bg-yellow-300 h-3 rounded-full w-[90%] animate-pulse"
+            ></div>
+          </div>
+        </div>
 
-    <!-- footer -->
+        <div
+          class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
+        >
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="text-lg font-semibold">React / NextJS</h3>
+            <span class="text-sm text-cyan-400">88%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-3">
+            <div
+              class="bg-sky-400 h-3 rounded-full w-[88%] animate-pulse"
+            ></div>
+          </div>
+        </div>
 
-    <!-- footer ends -->
+        <div
+          class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
+        >
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="text-lg font-semibold">Tailwind CSS / Bootstrap</h3>
+            <span class="text-sm text-cyan-400">80%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-3">
+            <div
+              class="bg-pink-400 h-3 rounded-full w-[80%] animate-pulse"
+            ></div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
+        >
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="text-lg font-semibold">ExpressJS / NestJS</h3>
+            <span class="text-sm text-cyan-400">87%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-3">
+            <div
+              class="bg-red-400 h-3 rounded-full w-[87%] animate-pulse"
+            ></div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
+        >
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="text-lg font-semibold">MongoDB / PostgreSQL</h3>
+            <span class="text-sm text-cyan-400">82%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-3">
+            <div
+              class="bg-green-400 h-3 rounded-full w-[82%] animate-pulse"
+            ></div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
+        >
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="text-lg font-semibold">Material UI / Ant Design</h3>
+            <span class="text-sm text-cyan-400">80%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-3">
+            <div
+              class="bg-indigo-400 h-3 rounded-full w-[80%] animate-pulse"
+            ></div>
+          </div>
+        </div>
+
+        <div
+          class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-[1.02] transition-transform duration-300"
+        >
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="text-lg font-semibold">Git & GitHub</h3>
+            <span class="text-sm text-cyan-400">85%</span>
+          </div>
+          <div class="w-full bg-gray-700 rounded-full h-3">
+            <div
+              class="bg-orange-300 h-3 rounded-full w-[85%] animate-pulse"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects" class="bg-gray-900 py-20 px-6 text-white">
+      <h2 class="text-4xl text-center font-bold mb-16 text-cyan-400">
+        Projects
+      </h2>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto"
+      >
+        <!-- Project Card 1 -->
+        <a
+          href="https://web-tesla.netlify.app/"
+          target="_blank"
+          class="bg-gray-800/50 backdrop-blur-sm border border-white/10 p-5 rounded-2xl shadow-md hover:shadow-cyan-500/20 transition-transform transform hover:-translate-y-1 hover:scale-[1.03] group"
+        >
+          <div class="flex items-center gap-3 mb-3">
+            <i class="fas fa-car text-cyan-300"></i>
+            <h3
+              class="text-lg font-semibold text-cyan-300 group-hover:underline"
+            >
+              Tesla (React)
+            </h3>
+          </div>
+          <div class="overflow-hidden rounded-lg">
+            <img
+              src="img/tesla.png"
+              alt="Tesla Project"
+              class="rounded-lg transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+        </a>
+
+        <!-- Project Card 2 -->
+        <a
+          href="https://lacunaventure.netlify.app/"
+          target="_blank"
+          class="bg-gray-800/50 backdrop-blur-sm border border-white/10 p-5 rounded-2xl shadow-md hover:shadow-cyan-500/20 transition-transform transform hover:-translate-y-1 hover:scale-[1.03] group"
+        >
+          <div class="flex items-center gap-3 mb-3">
+            <i class="fas fa-rocket text-cyan-300"></i>
+            <h3
+              class="text-lg font-semibold text-cyan-300 group-hover:underline"
+            >
+              Lacuna Venture
+            </h3>
+          </div>
+          <div class="overflow-hidden rounded-lg">
+            <img
+              src="img/lacunaventure.png"
+              alt="Lacuna Project"
+              class="rounded-lg transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+        </a>
+
+        <!-- Project Card 3 -->
+        <a
+          href="https://disneyplus-web.netlify.app/"
+          target="_blank"
+          class="bg-gray-800/50 backdrop-blur-sm border border-white/10 p-5 rounded-2xl shadow-md hover:shadow-cyan-500/20 transition-transform transform hover:-translate-y-1 hover:scale-[1.03] group"
+        >
+          <div class="flex items-center gap-3 mb-3">
+            <i class="fas fa-film text-cyan-300"></i>
+            <h3
+              class="text-lg font-semibold text-cyan-300 group-hover:underline"
+            >
+              Disney Plus Clone
+            </h3>
+          </div>
+          <div class="overflow-hidden rounded-lg">
+            <img
+              src="img/disneyplus.png"
+              alt="Disney Plus Project"
+              class="rounded-lg transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+        </a>
+
+        <!-- Add more cards here similarly -->
+      </div>
+    </section>
+
+    <!-- Font Awesome for icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font Awesome for icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 px-6 bg-gray-900 text-white">
+      <h2 class="text-3xl text-center font-bold mb-10 text-cyan-400">
+        Contact
+      </h2>
+      <form
+        class="max-w-3xl mx-auto space-y-6 bg-gray-800 bg-opacity-80 p-8 rounded-xl shadow-lg"
+      >
+        <!-- Name Input -->
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="w-full px-6 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-gray-400"
+        />
+
+        <!-- Email Input -->
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="w-full px-6 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-gray-400"
+        />
+
+        <!-- Message Input -->
+        <textarea
+          placeholder="Your Message"
+          class="w-full px-6 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder-gray-400 h-36 resize-none"
+        ></textarea>
+
+        <!-- Send Message Button -->
+        <button
+          type="submit"
+          class="w-full px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+        >
+          Send Message
+        </button>
+      </form>
+    </section>
+
+    <footer class="text-center text-gray-400 py-6 bg-gray-800">
+      © 2025 Bikesh Chaudhary. All rights reserved.
+    </footer>
   </body>
 </html>
